@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\Users\user\Global_Solution_2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\153271437.index
+\LincTech\src
+C:\Users\user\Global_Solution_2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2715143046.index
+\LINC_TECH\src
