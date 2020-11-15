@@ -23,6 +23,7 @@ nav {
 	background: none;
 	position: relative;
 	display: flex;
+	z-index: 1001;
 }
 
 .nav-links {
@@ -40,6 +41,33 @@ nav {
 	text-decoration: none;
 	font-size: 16px;
 }
+
+#logo {
+	display: flex;
+	align-items: center;
+	left: 5%;
+	position: relative;
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 16px;
+	font-weight: normal;
+	font-family: "Montserrat";
+}
+
+#logo:hover {
+	cursor: pointer;
+	color: #cdb30c;
+}
+
+.movie {
+	display: flex;
+	align-items: center;
+	left: 5%;
+	position: relative;
+}
+
+.movie h4 { font-weight: normal; color: white; }
 
 .line {
 	width: 30px;
@@ -64,15 +92,15 @@ nav {
 	width: 100%;
 	flex-direction: column;
 	clip-path: circle(50px at 90% -10%);
-	-webkit-clip-path: circle(100px at 90% -10%);
+	-webkit-clip-path: circle(40px at 90% -10%);
 	transition: all 1s ease-out;
 	pointer-events: none;
 	z-index: 2;
 }
 
 .nav-links.open {
-	clip-path: circle(1400px at 90% -10%);
-	-webkit-clip-path: circle(1400px at 90% -10%);
+	clip-path: circle(1500px at 90% -10%);
+	-webkit-clip-path: circle(1500px at 90% -10%);
 	pointer-events: all;
 }
 
@@ -81,7 +109,7 @@ nav {
 }
 
 .nav-links li a {
-	font-size: 25px;
+	font-size: 20px;
 }
 
 .nav-links li:nth-child(1) {

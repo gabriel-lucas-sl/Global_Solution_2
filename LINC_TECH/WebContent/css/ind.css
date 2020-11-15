@@ -18,6 +18,7 @@ body {
 	font-weight: 900;
 	animation: neonAnim 2s alternate-reverse infinite;
     color: white;
+    margin: 0 40px;
 }
 
 .movie {
@@ -34,20 +35,27 @@ body {
 .preto {
 	width: 100%;
 	background: black;
-	height: 110.4vh;
+	height: 100%;
 	position: absolute;
 	top: 0;
 	z-index: -3;
 	opacity: 60%;
 }
 
+.video {
+	overflow: hidden;
+	height: auto;
+}
+
 .video video {
 	z-index: -5;
-	position: absolute;
+	position: fixed;
 	top: 0;
-	left: 0;
-	width: 100%;
-	display: block;
+	right: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
 }
 
 /*CONFIGURAÇÕES DOS BOTÕES
@@ -150,3 +158,5 @@ body {
 	.titulo h1 {font-size: 50px;}
 	.titulo p {font-size: 18px;}
 }
+
+
