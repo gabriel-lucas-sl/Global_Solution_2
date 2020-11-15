@@ -23,8 +23,9 @@
 			<div class="line"></div>
 		</div>
 		<ul class="nav-links">
+			<li><a href="../index.jsp">Início</a><li>
 			<li><a href="#">Personagens</a><li>
-			<li><a href="timeline.jsp">Timeline</a><li>
+			<li><a href="timeline.jsp">Timeline</a><li>	
 			<li><a href="#">Machine Learning</a><li>
 			<li><a href="#">Diagrama de classes</a><li>
 		</ul>
