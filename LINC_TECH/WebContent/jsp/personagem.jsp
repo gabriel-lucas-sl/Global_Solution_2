@@ -5,10 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../css/main.css">
-<link rel="stylesheet" href="../css/timeli.css">
+<link rel="stylesheet" href="../css/per.css">
 <!--Favicon-->
 <link rel="icon" href="../favicon.ico">
-<title>Timeline</title>
+<title>Personagem - </title>
 </head>
 <body>
 	<nav>
@@ -23,34 +23,18 @@
 			<div class="line"></div>
 		</div>
 		<ul class="nav-links">
-			<li><a href="../index.jsp">Início</a><li>
-			<li><a href="timeline.jsp">Timeline</a><li>	
+			<li><a href="index.jsp">Início</a><li>
+			<li><a href="jsp/timeline.jsp">Timeline</a><li>
 			<li><a href="#">Machine Learning</a><li>
 			<li><a href="#">Diagrama de classes</a><li>
 		</ul>
 	</nav>
+	<div class="voltar">
+		<a href="ano1955.jsp">Voltar</a>
+	</div>
 	
-	<section class="content">
-		<div class="title">
-			<h4>LINHA DO TEMPO</h4>
-			<p>Selecione uma linha do tempo abaixo e descubra seus acontecimentos</p>
-		</div>
-		
-		<div class="timeline">
-			<%@ include file = "../WEB-INF/snippets/timeline/timeline.html" %>
-		</div>
-		
-	</section>
-	
-	<section class="waves">
-        <div class="wave wave1"></div>
-        <div class="wave wave2"></div>
-        <div class="wave wave3"></div>
-        <div class="wave wave4"></div>
-    </section>
-		
 	<script src="../js/menu.js"></script>
-	<script type="text/javascript">
+	<script>
 		function enviarIndex() {
 			location.href = "../index.jsp";
 		}

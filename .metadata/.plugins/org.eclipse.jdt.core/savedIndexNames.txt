@@ -4,7 +4,6 @@ INDEX VERSION 1.131+C:\Users\user\Global_Solution_2\.metadata\.plugins\org.eclip
 540708188.index
 3776131131.index
 851592365.index
-841877382.index
 1734193082.index
 2913700605.index
 4446910.index
