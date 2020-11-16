@@ -3,6 +3,7 @@ package br.com.linctech.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import br.com.linctech.beans.Personagem;
 import br.com.linctech.conexao.Conexao;
@@ -21,8 +22,9 @@ public class PersonagemDAO {
 		conect.close();
 	}
 	
-	public Personagem infoPersonagem(int id ) throws Exception {
-		state = conect.prepareStatement("SELECT * FROM PERSONAGEM INNER JOIN PERSONAGEM_TIMELINE WHERE PERSONAGEM.ID_PERSONAGEM = PERSONAGEM_TIMELINE.ID_PERSONAGEM WHERE ID_PERSONAGEM = ?");
+	public Personagem selecionarPersonagem(int id ) throws Exception {
+		state = conect.prepareStatement(
+			"SELECT PERSONAGEM.NOME,PERSONAGEM.ID_PERSONAGEM, PERSONAGEM.DESCRICAO, PERSONAGEM.PAPEL, PERSONAGEM_TIMELINE.IDADE  FROM PERSONAGEM INNER JOIN PERSONAGEM_TIMELINE ON PERSONAGEM.ID_PERSONAGEM = PERSONAGEM_TIMELINE.ID_PERSONAGEM WHERE PERSONAGEM_TIMELINE.ID_PERSONAGEM = ?");
 		state.setInt(1, id);
 		result = state.executeQuery();
 		while(result.next()) {
@@ -31,4 +33,5 @@ public class PersonagemDAO {
 		}
 		return new Personagem();
 	}
+	
 }

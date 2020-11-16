@@ -6,7 +6,7 @@ public class Timeline {
 	private String acontecimentos;
 	private LocalDate data;
 	private String descricao;
-	private int ano;
+	private String tempo;
 	private Personagem personagem;
 	
 	
@@ -15,12 +15,12 @@ public class Timeline {
 	}
 	
 	
-	public Timeline(String acontecimentos, LocalDate data, String descricao, int ano, Personagem personagem) {
+	public Timeline(String acontecimentos, LocalDate data, String descricao, String ano, Personagem personagem) {
 		super();
 		this.acontecimentos = acontecimentos;
 		this.data = data;
 		this.descricao = descricao;
-		this.ano = ano;
+		this.tempo = tempo;
 		this.personagem = personagem;
 		
 	}
@@ -35,15 +35,13 @@ public class Timeline {
 	}
 
 
-	public int getAno() {
-		return ano;
+	public String getAno() {
+		return tempo;
 	}
 
-
-	public void setAno(int ano) {
-		this.ano = ano;
+	public void setAno(String tempo) {
+		this.tempo = tempo;
 	}
-
 
 	public String getAcontecimentos() {
 		return acontecimentos;
