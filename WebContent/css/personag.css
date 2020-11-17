@@ -1,0 +1,100 @@
+body {
+	background: #1b1b1b;
+}
+
+.voltar {
+	position: relative;
+	left: 5.5%;
+	top: 50%;
+	display: inline;
+}
+
+.voltar a{
+    color: #cdb30c;
+    font-size: 14px;
+}
+
+.voltar a:hover {
+	text-decoration: underline;	
+}
+
+.slide-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 70vh;
+	background: #1b1b1b;
+	margin: 3rem 0;
+}
+
+.title {	
+	text-align: center;
+	font-size: 42px;
+	margin: 0 30px;
+	color: white;
+	font-weight: 900;
+	padding-top: 2rem;
+}
+
+.title h4 {margin: -1rem;}
+
+.title p {
+	font-size: 15px;
+	font-weight: 300;
+	margin-top: 1rem;
+	display: inline-block;
+}
+
+.title p:hover {
+	color: #cdb30c; 
+	font-weight: 500;
+}
+
+
+.card {
+	position: relative;
+	background: white;
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+}
+
+.card .content a {
+	display: inline-block;
+	margin: 10px 0 0;
+	padding: 10px 20px;
+	text-decoration: none;
+	border: 2px solid #262626;
+	color: #262626;
+	font-weight: 600;
+}
+
+.card .content a:hover {
+	background: #cdb30c;
+	color: white;
+}
+
+.card .content {
+	width: 400px;
+	padding: 30px;
+	box-sizing: border-box;
+}
+
+.card .sliderText {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #000;
+}
+
+.card .sliderText h3 {
+	color: white;
+	font-size: 3em;
+}
+
+#x {
+	width: 400px;
+}

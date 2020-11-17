@@ -1,0 +1,19 @@
+body {
+	background: #1b1b1b;
+}
+
+.voltar {
+	position: relative;
+	left: 5.5%;
+	top: 50%;
+	display: inline;
+}
+
+.voltar a{
+    color: #cdb30c;
+    font-size: 14px;
+}
+
+.voltar a:hover {
+	text-decoration: underline;	
+}
