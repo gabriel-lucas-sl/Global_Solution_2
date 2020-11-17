@@ -37,7 +37,7 @@ body { background: #1b1b1b;}
 
 .datas {
 	display: flex;
-	align-items: end;
+	align-items: flex-end;
 	margin: 0 30px;
 	font-size: 22px;
 	font-weight: 300;

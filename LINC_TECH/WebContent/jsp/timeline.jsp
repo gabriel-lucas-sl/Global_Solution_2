@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../css/main.css">
-<link rel="stylesheet" href="../css/timeli.css">
+<link rel="stylesheet" href="../css/timelin.css">
 <!--Favicon-->
 <link rel="icon" href="../favicon.ico">
 <title>Timeline</title>

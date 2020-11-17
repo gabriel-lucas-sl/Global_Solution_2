@@ -1,0 +1,146 @@
+body {
+	background: #1b1b1b;
+}
+
+#logo #auxH4{
+    display: flex;
+    align-items: center;
+    left: 5%;
+    position: relative;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "Montserrat";
+}
+
+#auxNavLinks {
+	position: fixed;
+	background: #cdb30c;
+	height: 100vh;
+	width: 100%;
+	flex-direction: column;
+	clip-path: circle(50px at 90% -10%);
+	-webkit-clip-path: circle(40px at 90% -10%);
+	transition: all 1s ease-out;
+	pointer-events: none;
+	z-index: 2;
+}
+
+.voltar {
+	position: relative;
+	left: 6.35%;
+	display: inline;
+}
+
+.voltar a{
+    color: #cdb30c;
+    font-size: 14px;
+}
+
+.voltar a:hover {
+	text-decoration: underline;	
+}
+
+.content {
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	margin-bottom: 3rem;
+}
+
+.box {
+	border: 1px solid;
+	width: 70vw;
+	display: flex;
+	height: 66.84vh;
+	background: #cdb30c;
+}
+
+.box-img {
+	position: relative;
+	bottom: 3rem;
+	padding: 0 2rem;
+}
+
+.image {
+	width: 118.61vh;
+}
+
+.img img {
+	height: 69.8vh;
+}
+
+
+.info {
+	width: 100%;
+	padding: 1.5rem 1.8rem 1.5rem 0;
+}
+
+.superior {
+	height: 12vh;
+}
+
+.superior h3 {
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+	color: #1b1b1b;
+}
+
+.superior h2 {
+	font-size: 20px;
+	color: #1b1b1b;
+	font-weight: 900;
+}
+
+.inferior {
+	height: 38.3vh;
+	overflow: auto;
+	display: flex;
+	align-items: center;
+}
+
+.inferior p {
+    line-height: 1.6;
+    font-size: 15px;
+    font-weight: 300;
+    color: #1b1b1b;
+}
+
+.botoes {
+	height: 10.3vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.botoes button {
+	background: #1b1b1b;
+	border: none;
+	outline: none;
+	color: white;
+	letter-spacing: 1px;
+}
+
+.botoes button:hover {
+	color: #1b1b1b;
+	background: none;
+	border: 1px solid #1b1b1b;
+	cursor: pointer;
+}
+
+.btnOriginal button {
+	padding: 0.75rem 2.14rem;
+	border-radius: 25px;
+}
+
+.btnAlternativo button{
+	padding: 12px 24px;
+	border-radius: 25px;
+}
+
+
+

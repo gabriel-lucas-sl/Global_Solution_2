@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../css/main.css">
-<link rel="stylesheet" href="../css/personag.css">
+<link rel="stylesheet" href="../css/personage.css">
 <!--Favicon-->
 <link rel="icon" href="../favicon.ico">
 <!-- Link Swiper's CSS -->
@@ -44,12 +44,18 @@
 				<div class="swiper-slide" id="x">
 					<div class="card">
 						<div class="sliderText">
-							<h3>Slide One</h3>
+							<img alt="Imagem do personagem" src="../img/marty2.jpg">
+							<h3>Marty McFly</h3>
 						</div>
 						<div class="content">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-							eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<a href="personagem.jsp">Read More</a>
+							<p>Guitarrista e skatista talentoso e filho dos McFlys. 
+							Conheceu seu amigo "Doc" quando tinha quatorze anos após 
+							invadir o laboratório dele, pois tinha escutado histórias 
+							sobre a insanidade do doutor, porém ao encontrar o 
+							laboratório, ficou fascinado. Quando Doc o pegou ficou 
+							feliz de ter alguém para compartilhar seu trabalho e desde 
+							então a amizade deles foi se fortificando.</p>
+							<a href="personagem.jsp">Leia Mais</a>
 						</div>
 					</div>
 				</div>
@@ -62,7 +68,7 @@
 						<div class="content">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
 							eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<a href="personagem.jsp">Read More</a>
+							<a href="personagem.jsp">Leia Mais</a>
 						</div>
 					</div>
 				</div>
@@ -75,7 +81,7 @@
 						<div class="content">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
 							eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<a href="personagem.jsp">Read More</a>
+							<a href="personagem.jsp">Leia Mais</a>
 						</div>
 					</div>
 				</div>

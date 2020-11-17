@@ -55,8 +55,13 @@ body {
 	position: relative;
 	background: white;
 	width: 400px;
-	height: 400px;
+	height: 550px;
 	margin: 0 auto;
+}
+
+.sliderText img {
+	position: absolute;
+	z-index: 1;
 }
 
 .card .content a {
@@ -83,16 +88,18 @@ body {
 .card .sliderText {
 	position: relative;
 	width: 100%;
-	height: 200px;
+	height: 240px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #000;
+	background: #cdb30c;
 }
 
 .card .sliderText h3 {
 	color: white;
 	font-size: 3em;
+	z-index: 2;
+	font-weight: 400;
 }
 
 #x {
