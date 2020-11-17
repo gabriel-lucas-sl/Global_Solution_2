@@ -8,6 +8,6 @@ public class Conexao {
 	
 	public static Connection conexaoBanco() throws SQLException {
 		
-		return DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL", "rm84826", "231299");
+		return DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL", "rm86501", "040598");
 	}
 }
