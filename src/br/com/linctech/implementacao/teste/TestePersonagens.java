@@ -14,7 +14,7 @@ public class TestePersonagens {
 			System.out.println("DESCRIÇÃO: " + persi.getDescricao());
 			System.out.println("PAPEL:     " + persi.getPapelNoFilme());
 			System.out.println("IDADE:     " + persi.getIdade());
-			System.out.println();
+			System.out.println(); 
 		}
 	}
 }
