@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="css/ind.css">
 <title>Back To The Future</title>
 </head>
-<body>
+<body onpageshow="message()">
 	
 	<nav>
 		<div class="movie">
@@ -52,5 +52,11 @@
 	</div>
 
 <script src="js/menu.js"></script>
+<script type="text/javascript">
+	function message() {
+		alert("Olá, amigo! \n"
+				+ "Para melhorar a sua experiência utilizando o nosso site é importante que você permita a utilização de som e vídeo da nossa página web, caso já não tenha feito. Tenha uma ótima aventura!")
+	}
+</script>
 </body>
 </html>
