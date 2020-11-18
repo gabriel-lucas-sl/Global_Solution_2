@@ -32,7 +32,9 @@
 			<li><a href="#">Diagrama de classes</a><li>
 		</ul>
 	</nav>
-
+	<div class="voltar">
+		<a href="timeline.jsp" id="voltar-a">Voltar</a>
+	</div>
 	<div class="title">
 		<h4>PERSONAGENS</h4>
 		<p>Esses são os personagens envolvidos nessa linha de tempo</p>
