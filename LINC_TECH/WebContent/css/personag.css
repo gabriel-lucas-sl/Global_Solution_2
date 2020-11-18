@@ -80,7 +80,7 @@ body {
 }
 
 .superior {
-	height: 12vh;
+	height: 72.84px;;
 }
 
 .superior h3 {
@@ -141,6 +141,86 @@ body {
 	padding: 12px 24px;
 	border-radius: 25px;
 }
+
+@media screen and (max-width: 1230px) {
+	.content {
+		align-items: flex-start;
+		height: 100%;
+	}
+	
+	.box {
+		height: 100%;	
+		display: inline;
+		margin-top: 6rem;
+	}
+	
+	.img img {
+    	height: 32rem;
+	}
+	
+	.image {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	
+	.info {
+		text-align: center;
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.inferior {
+		height: auto;
+		margin-top: 2rem;
+	}
+	
+	.botoes {
+		width: 60%;
+		margin-top: 2rem;
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 930px) {
+	.botoes {
+		display: inline;
+		height: 100%;
+	}
+	
+	.btnOriginal {
+	    margin-bottom: 1rem;
+	}
+	
+}
+
+@media screen and (max-width: 840px) {
+	.img img {
+    	height: 22rem;
+	}
+	
+	.inferior {
+		margin-top: 0;
+	}
+	
+}
+
+@media screen and (max-width: 486px) {
+	.botoes {
+		width: 56vw;
+		height: 100%;
+	}
+	
+	.superior {
+    	height: 6rem;
+	}
+}
+
+
+
+
 
 
 

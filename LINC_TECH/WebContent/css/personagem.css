@@ -50,6 +50,10 @@ body {
 	font-weight: 500;
 }
 
+.content p {
+	height: 200px;
+	overflow: auto;
+}
 
 .card {
 	position: relative;
@@ -105,3 +109,5 @@ body {
 #x {
 	width: 400px;
 }
+
+
