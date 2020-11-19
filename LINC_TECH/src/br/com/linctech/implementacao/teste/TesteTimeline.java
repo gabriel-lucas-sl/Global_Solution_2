@@ -43,6 +43,7 @@ public class TesteTimeline {
 			for (Futuro fut : futuro) {
 				System.out.println("Nome:          " + fut.getPersonagem().getNome());
 				System.out.println("Acontecimento: " + fut.getAcontecimentos());
+				System.out.println("Descrição:     " + fut.getDescricao());
 				System.out.println("Data:          " + fut.getData().format(data));
 				System.out.println();
 			}
@@ -52,7 +53,28 @@ public class TesteTimeline {
 			for (Presente pres : presente) {
 				System.out.println("Nome:          " + pres.getPersonagem().getNome());
 				System.out.println("Acontecimento: " + pres.getAcontecimentos());
+				System.out.println("Descrição:     " + pres.getDescricao());
 				System.out.println("Data:          " + pres.getData().format(data));
+				System.out.println();
+			}
+
+			System.out.println("----------------PRESENTE ALTERNATIVO");
+			List<Presente> presenteAlternativo = daoTime.selecPresenteAlternativo();
+			for (Presente presAlternativo : presenteAlternativo) {
+				System.out.println("Nome:          " + presAlternativo.getPersonagem().getNome());
+				System.out.println("Acontecimento: " + presAlternativo.getAcontecimentos());
+				System.out.println("Descrição:     " + presAlternativo.getDescricao());
+				System.out.println("Data:          " + presAlternativo.getData().format(data));
+				System.out.println();
+			}
+
+			System.out.println("----------------PRESENTE ALTERNATIVO ALTERADO");
+			List<Presente> presenteAlternativoAlterado = daoTime.selecPresenteAlternativo();
+			for (Presente presAlternativoAlterado : presenteAlternativoAlterado) {
+				System.out.println("Nome:          " + presAlternativoAlterado.getPersonagem().getNome());
+				System.out.println("Acontecimento: " + presAlternativoAlterado.getAcontecimentos());
+				System.out.println("Descrição:     " + presAlternativoAlterado.getDescricao());
+				System.out.println("Data:          " + presAlternativoAlterado.getData().format(data));
 				System.out.println();
 			}
 
@@ -62,7 +84,19 @@ public class TesteTimeline {
 
 				System.out.println("Nome:          " + past.getPersonagem().getNome());
 				System.out.println("Acontecimento: " + past.getAcontecimentos());
+				System.out.println("Descrição:     " + past.getDescricao());
 				System.out.println("Data:          " + past.getData().format(data));
+				System.out.println();
+			}
+
+			System.out.println("----------------PASSADO ALTERNATIVO");
+			List<Passado> passadoAlternativo = daoTime.selecPassadoAlternativo();
+			for (Passado pastAlternativo : passadoAlternativo) {
+
+				System.out.println("Nome:          " + pastAlternativo.getPersonagem().getNome());
+				System.out.println("Acontecimento: " + pastAlternativo.getAcontecimentos());
+				System.out.println("Descrição:     " + pastAlternativo.getDescricao());
+				System.out.println("Data:          " + pastAlternativo.getData().format(data));
 				System.out.println();
 			}
 

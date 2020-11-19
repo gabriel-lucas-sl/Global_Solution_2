@@ -28,21 +28,6 @@ body {
 	z-index: 2;
 }
 
-.voltar {
-	position: relative;
-	left: 6.35%;
-	display: inline;
-}
-
-.voltar a{
-    color: #cdb30c;
-    font-size: 14px;
-}
-
-.voltar a:hover {
-	text-decoration: underline;	
-}
-
 .content {
 	height: 80vh;
 	display: flex;

@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="../css/main.css">
-<link rel="stylesheet" href="../css/personagem.css">
+<%@ include file = "../../WEB-INF/snippets/imports/libs-head2.jsp" %>
+<link rel="stylesheet" href="css/mai.css">
+<link rel="stylesheet" href="css/personage.css">
 <!--Favicon-->
-<link rel="icon" href="../favicon.ico">
+<link rel="icon" href="favicon.ico">
 <!-- Link Swiper's CSS -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -17,7 +17,7 @@
 	<nav>
 		<div class="movie">
 			<button onclick="enviarIndex()" id="logo">
-				<h4>De Volta ao Futuro</h4>
+				<img alt="Logo" src="img/logo3.png" class="logo">
 			</button>
 		</div>		
 		<div class="hamburger">
@@ -28,8 +28,8 @@
 		<ul class="nav-links">
 			<li><a href="../index.jsp">Início</a><li>
 			<li><a href="timeline.jsp">Timeline</a><li>	
-			<li><a href="#">Machine Learning</a><li>
-			<li><a href="#">Diagrama de classes</a><li>
+			<li><a href="https://drive.google.com/file/d/1sLPMJyI5DvHHqCR785MV7sXnFu3ZEW4j/view">Machine Learning</a><li>
+			<li><a href="https://drive.google.com/drive/u/4/folders/1e7SH9DNrcd6pmnrWiSccOAo0kvEYbU9V">Diagrama de classes</a><li>
 		</ul>
 	</nav>
 	<div class="voltar">
@@ -39,57 +39,38 @@
 		<h4>PERSONAGENS</h4>
 		<p>Esses são os personagens envolvidos nessa linha de tempo</p>
 	</div>
-	<section class="slide-section">		
+	<section class="slide-section">	
 		<!-- Swiper -->
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide" id="x">
-					<div class="card">
-						<div class="sliderText">
-							<img alt="Imagem do personagem" src="../img/marty2.jpg">
-							<h3>Marty McFly</h3>
+				<c:choose>
+					<c:when test="${not empty personagensPassado}">
+						<c:forEach var="p" items="${personagensPassado}">
+							<div class="swiper-slide" id="x">
+								<div class="card">
+									<div class="sliderText">
+										<div class="black"></div>
+										<img alt="Imagem do personagem" src="img/${p.getPersonagem().img}">
+										<h3>${p.getPersonagem().nome}</h3>
+									</div>
+									<div class="content">
+										<p>${p.getPersonagem().descricao}</p>
+										<a href="jsp/personagem.jsp">Leia Mais</a>
+									</div>
+								</div>
+							</div>
+						</c:forEach>
+					</c:when>
+					<c:otherwise>
+						<div class="">
+							<h1 style="text-align:center; color: red;">LISTA VAZIA</h1>
 						</div>
-						<div class="content">
-							<p>Guitarrista e skatista talentoso e filho dos McFlys. 
-							Conheceu seu amigo "Doc" quando tinha quatorze anos após 
-							invadir o laboratório dele, pois tinha escutado histórias 
-							sobre a insanidade do doutor, porém ao encontrar o 
-							laboratório, ficou fascinado. Quando Doc o pegou ficou 
-							feliz de ter alguém para compartilhar seu trabalho e desde 
-							então a amizade deles foi se fortificando.</p>
-							<a href="personagem.jsp">Leia Mais</a>
-						</div>
-					</div>
-				</div>
+					</c:otherwise>
+				</c:choose>
 				
-				<div class="swiper-slide" id="x">
-					<div class="card">
-						<div class="sliderText">
-							<img alt="Imagem do personagem" src="../img/dr_1955.jpg">
-							<h3>Dr. Brown</h3>
-						</div>
-						<div class="content">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-							eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<a href="personagem.jsp">Leia Mais</a>
-						</div>
-					</div>
-				</div>
-	
-				<div class="swiper-slide" id="x">
-					<div class="card">
-						<div class="sliderText">
-							<h3>Slide One</h3>
-						</div>
-						<div class="content">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-							eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<a href="personagem.jsp">Leia Mais</a>
-						</div>
-					</div>
-				</div>
 			</div>
-		</div>
+		</div>	
+				
 	</section>
  	
 	<!-- Swiper JS -->
@@ -116,7 +97,7 @@
 	  });
 	  
 	  function enviarIndex() {
-			location.href = "../index.jsp";
+			location.href = "index.jsp";
 		}
 	</script>
 </body>

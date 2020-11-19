@@ -54,6 +54,14 @@ public class Timeline {
 		this.data = data;
 	}
 
+	public String getTempo() {
+		return tempo;
+	}
+
+	public void setTempo(String tempo) {
+		this.tempo = tempo;
+	}
+
 	public Personagem getPersonagem() {
 		return personagem;
 	}

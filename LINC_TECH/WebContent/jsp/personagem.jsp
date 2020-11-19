@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/mai.css">
 <link rel="stylesheet" href="../css/personag.css">
 <!--Favicon-->
 <link rel="icon" href="../favicon.ico">
@@ -14,7 +14,7 @@
 	<nav>
 		<div class="movie">
 			<button onclick="enviarIndex()" id="logo">
-				<h4 id="auxH4">De Volta ao Futuro</h4>
+				<img alt="Logo" src="../img/logo3.png" class="logo">
 			</button>
 		</div>		
 		<div class="hamburger">
@@ -25,12 +25,12 @@
 		<ul class="nav-links" id="auxNav">
 			<li><a href="../index.jsp">Início</a><li>
 			<li><a href="timeline.jsp">Timeline</a><li>
-			<li><a href="#">Machine Learning</a><li>
+			<li><a href="https://drive.google.com/file/d/1sLPMJyI5DvHHqCR785MV7sXnFu3ZEW4j/view">Machine Learning</a><li>
 			<li><a href="#">Diagrama de classes</a><li>
 		</ul>
 	</nav>
 	<div class="voltar">
-		<a href="ano1955.jsp" id="voltar-a">Voltar</a>
+		<a href="../selecionarPersonagemPassado" id="voltar-a">Voltar</a>
 	</div>
 	
 	

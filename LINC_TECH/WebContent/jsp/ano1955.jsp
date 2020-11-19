@@ -4,10 +4,10 @@
 <html>
 <head>
 <%@ include file = "../../WEB-INF/snippets/imports/libs-head2.jsp" %>
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/personagem.css">
+<link rel="stylesheet" href="css/mai.css">
+<link rel="stylesheet" href="css/personage.css">
 <!--Favicon-->
-<link rel="icon" href="../favicon.ico">
+<link rel="icon" href="favicon.ico">
 <!-- Link Swiper's CSS -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -17,7 +17,7 @@
 	<nav>
 		<div class="movie">
 			<button onclick="enviarIndex()" id="logo">
-				<h4>De Volta ao Futuro</h4>
+				<img alt="Logo" src="img/logo3.png" class="logo">
 			</button>
 		</div>		
 		<div class="hamburger">
@@ -26,10 +26,10 @@
 			<div class="line"></div>
 		</div>
 		<ul class="nav-links">
-			<li><a href="../index.jsp">Início</a><li>
+			<li><a href="index.jsp">Início</a><li>
 			<li><a href="timeline.jsp">Timeline</a><li>	
-			<li><a href="#">Machine Learning</a><li>
-			<li><a href="#">Diagrama de classes</a><li>
+			<li><a href="https://drive.google.com/file/d/1sLPMJyI5DvHHqCR785MV7sXnFu3ZEW4j/view">Machine Learning</a><li>
+			<li><a href="https://drive.google.com/drive/u/4/folders/1e7SH9DNrcd6pmnrWiSccOAo0kvEYbU9V">Diagrama de classes</a><li>
 		</ul>
 	</nav>
 	<div class="voltar">
@@ -40,7 +40,6 @@
 		<p>Esses são os personagens envolvidos nessa linha de tempo</p>
 	</div>
 	<section class="slide-section">	
-	
 		<!-- Swiper -->
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
@@ -50,6 +49,7 @@
 							<div class="swiper-slide" id="x">
 								<div class="card">
 									<div class="sliderText">
+										<div class="black"></div>
 										<img alt="Imagem do personagem" src="img/${p.getPersonagem().img}">
 										<h3>${p.getPersonagem().nome}</h3>
 									</div>
@@ -63,11 +63,10 @@
 					</c:when>
 					<c:otherwise>
 						<div class="">
-							<h1 style="text-align:center;">LISTA VAZIA</h1>
+							<h1 style="text-align:center; color: red;">LISTA VAZIA</h1>
 						</div>
 					</c:otherwise>
-				</c:choose>
-				
+				</c:choose>				
 			</div>
 		</div>	
 				
@@ -97,7 +96,7 @@
 	  });
 	  
 	  function enviarIndex() {
-			location.href = "../index.jsp";
+			location.href = "index.jsp";
 		}
 	</script>
 </body>

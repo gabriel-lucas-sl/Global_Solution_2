@@ -6,7 +6,7 @@ public class Futuro extends Timeline {
 
 	public Futuro() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public Futuro(String acontecimentos, LocalDate data, String descricao, String tempo, Personagem personagem) {

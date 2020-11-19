@@ -32,6 +32,8 @@ body {
 	font-weight: normal;
 }
 
+.logo {width: 90px;}
+
 .preto {
 	width: 100%;
 	background: black;

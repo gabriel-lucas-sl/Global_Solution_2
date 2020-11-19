@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/mai.css">
 <link rel="stylesheet" href="css/timelin.css">
 <!--Favicon-->
 <link rel="icon" href="favicon.ico">
@@ -14,7 +14,7 @@
 	<nav>
 		<div class="movie">
 			<button onclick="enviarIndex()" id="logo">
-				<h4>De Volta ao Futuro</h4>
+				<img alt="Logo" src="img/logo3.png" class="logo">
 			</button>
 		</div>		
 		<div class="hamburger">
@@ -23,10 +23,11 @@
 			<div class="line"></div>
 		</div>
 		<ul class="nav-links">
-			<li><a href="../index.jsp">Início</a><li>
+			<li><a href="index.jsp">Início</a><li>
 			<li><a href="timeline.jsp">Timeline</a><li>	
-			<li><a href="#">Machine Learning</a><li>
-			<li><a href="#">Diagrama de classes</a><li>
+			<li><a href="#">Curiosidades</a><li>	
+			<li><a href="https://drive.google.com/file/d/1sLPMJyI5DvHHqCR785MV7sXnFu3ZEW4j/view">Machine Learning</a><li>
+			<li><a href="https://drive.google.com/drive/u/4/folders/1e7SH9DNrcd6pmnrWiSccOAo0kvEYbU9V">Diagrama de classes</a><li>
 		</ul>
 	</nav>
 	
@@ -49,10 +50,10 @@
         <div class="wave wave4"></div>
     </section>
 		
-	<script src="../js/menu.js"></script>
+	<script src="js/menu.js"></script>
 	<script type="text/javascript">
 		function enviarIndex() {
-			location.href = "../index.jsp";
+			location.href = "index.jsp";
 		}
 	</script>
 </body>
