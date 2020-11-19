@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../css/main.css">
-<link rel="stylesheet" href="../css/timelin.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/timelin.css">
 <!--Favicon-->
-<link rel="icon" href="../favicon.ico">
+<link rel="icon" href="favicon.ico">
 <title>Timeline</title>
 </head>
 <body>
@@ -37,7 +37,7 @@
 		</div>
 		
 		<div class="timeline">
-			<%@ include file = "../WEB-INF/snippets/timeline/timeline.html" %>
+			<%@ include file = "WEB-INF/snippets/timeline/timeline.html" %>
 		</div>
 		
 	</section>

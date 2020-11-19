@@ -9,8 +9,8 @@ public class Futuro extends Timeline {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Futuro(String acontecimentos, LocalDate data, String descricao, String ano, Personagem personagem) {
-		super(acontecimentos, data, descricao, ano, personagem);
+	public Futuro(String acontecimentos, LocalDate data, String descricao, String tempo, Personagem personagem) {
+		super(acontecimentos, data, descricao, tempo, personagem);
 		// TODO Auto-generated constructor stub
 	}
 

@@ -25,16 +25,55 @@ public class PersonagemDAO {
 		conect.close();
 	}
 
-	public List<Personagem> selecionarPersonagem() throws Exception {
-		List<Personagem> lista = new ArrayList<Personagem>();
+//	public List<Personagem> selecionarPersonagem() throws Exception {
+//		List<Personagem> lista = new ArrayList<Personagem>();
+//		state = conect.prepareStatement(
+//				"SELECT DISTINCT PERSONAGEM.ID_PERSONAGEM,PERSONAGEM.NOME,PERSONAGEM_TIMELINE.IDADE, PERSONAGEM.DESCRICAO, PERSONAGEM.PAPEL  FROM PERSONAGEM INNER JOIN PERSONAGEM_TIMELINE ON PERSONAGEM.ID_PERSONAGEM = PERSONAGEM_TIMELINE.ID_PERSONAGEM INNER JOIN TIMELINE ON TIMELINE.ID_TIMELINE = PERSONAGEM_TIMELINE.ID_TIMELINE WHERE EXTRACT(YEAR FROM TIMELINE.DT_TIMELINE) = '1985'");
+//		result = state.executeQuery();
+//		while (result.next()) {
+//			lista.add(new Personagem(result.getInt("ID_PERSONAGEM"), result.getString("NOME"),
+//					result.getString("DESCRICAO"), result.getString("PAPEL"), result.getInt("IDADE")));
+//		}
+//		return lista;
+//	}
+
+	public List<Personagem> selecionarPersonagemPresente() throws Exception {
+		List<Personagem> listaPresente = new ArrayList<Personagem>();
 		state = conect.prepareStatement(
-				"SELECT DISTINCT PERSONAGEM.ID_PERSONAGEM,PERSONAGEM.NOME,PERSONAGEM_TIMELINE.IDADE, PERSONAGEM.DESCRICAO, PERSONAGEM.PAPEL  FROM PERSONAGEM INNER JOIN PERSONAGEM_TIMELINE ON PERSONAGEM.ID_PERSONAGEM = PERSONAGEM_TIMELINE.ID_PERSONAGEM INNER JOIN TIMELINE ON TIMELINE.ID_TIMELINE = PERSONAGEM_TIMELINE.ID_TIMELINE WHERE EXTRACT(YEAR FROM TIMELINE.DT_TIMELINE) = '1985'");
+				"SELECT DISTINCT TIMELINE.DT_TIMELINE,PERSONAGEM.PAPEL, PERSONAGEM.NOME, PERSONAGEM.DESCRICAO, PERSONAGEM.ID_PERSONAGEM, PERSONAGEM_TIMELINE.IDADE, PERSONAGEM_IMAGEM.URL FROM TIMELINE INNER JOIN PERSONAGEM_TIMELINE ON TIMELINE.ID_TIMELINE = PERSONAGEM_TIMELINE.ID_TIMELINE INNER JOIN PERSONAGEM ON PERSONAGEM.ID_PERSONAGEM = PERSONAGEM_TIMELINE.ID_PERSONAGEM INNER JOIN PERSONAGEM_IMAGEM ON PERSONAGEM_IMAGEM.ID_TIMELINE = PERSONAGEM_TIMELINE.ID_TIMELINE WHERE EXTRACT (YEAR FROM DT_TIMELINE) = '1985' AND TIMELINE.TEMPO = 'Original' ORDER BY DT_TIMELINE ASC");
 		result = state.executeQuery();
 		while (result.next()) {
-			lista.add(new Personagem(result.getInt("ID_PERSONAGEM"), result.getString("NOME"),
-					result.getString("DESCRICAO"), result.getString("PAPEL"), result.getInt("IDADE")));
+			listaPresente.add(new Personagem(result.getInt("ID_PERSONAGEM"), result.getString("NOME"),
+					result.getString("DESCRICAO"), result.getString("PAPEL"), result.getInt("IDADE"),
+					result.getString("URL")));
 		}
-		return lista;
+		return listaPresente;
+	}
+
+	public List<Personagem> selecionarPersonagemPassado() throws Exception {
+		List<Personagem> listaPassado = new ArrayList<Personagem>();
+		state = conect.prepareStatement(
+				"SELECT DISTINCT TIMELINE.DT_TIMELINE,PERSONAGEM.PAPEL, PERSONAGEM.NOME, PERSONAGEM.DESCRICAO, PERSONAGEM.ID_PERSONAGEM, PERSONAGEM_TIMELINE.IDADE, PERSONAGEM_IMAGEM.URL FROM TIMELINE INNER JOIN PERSONAGEM_TIMELINE ON TIMELINE.ID_TIMELINE = PERSONAGEM_TIMELINE.ID_TIMELINE INNER JOIN PERSONAGEM ON PERSONAGEM.ID_PERSONAGEM = PERSONAGEM_TIMELINE.ID_PERSONAGEM INNER JOIN PERSONAGEM_IMAGEM ON PERSONAGEM_IMAGEM.ID_TIMELINE = PERSONAGEM_TIMELINE.ID_TIMELINE WHERE EXTRACT (YEAR FROM DT_TIMELINE) = '1955' ORDER BY DT_TIMELINE ASC");
+		result = state.executeQuery();
+		while (result.next()) {
+			listaPassado.add(new Personagem(result.getInt("ID_PERSONAGEM"), result.getString("NOME"),
+					result.getString("DESCRICAO"), result.getString("PAPEL"), result.getInt("IDADE"),
+					result.getString("URL")));
+		}
+		return listaPassado;
+	}
+
+	public List<Personagem> selecionarPersonagemFuturo() throws Exception {
+		List<Personagem> listaFuturo = new ArrayList<Personagem>();
+		state = conect.prepareStatement(
+				"SELECT DISTINCT TIMELINE.DT_TIMELINE,PERSONAGEM.PAPEL, PERSONAGEM.NOME, PERSONAGEM.DESCRICAO, PERSONAGEM.ID_PERSONAGEM, PERSONAGEM_TIMELINE.IDADE, PERSONAGEM_IMAGEM.URL FROM TIMELINE INNER JOIN PERSONAGEM_TIMELINE ON TIMELINE.ID_TIMELINE = PERSONAGEM_TIMELINE.ID_TIMELINE INNER JOIN PERSONAGEM ON PERSONAGEM.ID_PERSONAGEM = PERSONAGEM_TIMELINE.ID_PERSONAGEM INNER JOIN PERSONAGEM_IMAGEM ON PERSONAGEM_IMAGEM.ID_TIMELINE = PERSONAGEM_TIMELINE.ID_TIMELINE WHERE EXTRACT (YEAR FROM DT_TIMELINE) = '2015' ORDER BY DT_TIMELINE ASC");
+		result = state.executeQuery();
+		while (result.next()) {
+			listaFuturo.add(new Personagem(result.getInt("ID_PERSONAGEM"), result.getString("NOME"),
+					result.getString("DESCRICAO"), result.getString("PAPEL"), result.getInt("IDADE"),
+					result.getString("URL")));
+		}
+		return listaFuturo;
 	}
 
 }

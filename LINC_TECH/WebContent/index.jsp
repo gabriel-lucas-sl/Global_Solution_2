@@ -36,7 +36,7 @@
 		<h1 class="title">VAMOS VIAJAR NO TEMPO?</h1>
 		<div class="botoes">
 		   <div class="button">
-		       <a href="jsp/timeline.jsp">
+		       <a href="timeline.jsp">
 		       <span></span>
 		       <span></span>
 		       <span></span>

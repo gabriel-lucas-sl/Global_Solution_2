@@ -8,32 +8,27 @@ public class Timeline {
 	private String descricao;
 	private String tempo;
 	private Personagem personagem;
-	
-	
+
 	public Timeline() {
 		super();
 	}
-	
-	
-	public Timeline(String acontecimentos, LocalDate data, String descricao, String ano, Personagem personagem) {
+
+	public Timeline(String acontecimentos, LocalDate data, String descricao, String tempo, Personagem personagem) {
 		super();
 		this.acontecimentos = acontecimentos;
 		this.data = data;
 		this.descricao = descricao;
 		this.tempo = tempo;
 		this.personagem = personagem;
-		
 	}
-	
+
 	public String getDescricao() {
 		return descricao;
 	}
 
-
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-
 
 	public String getAno() {
 		return tempo;
@@ -46,6 +41,7 @@ public class Timeline {
 	public String getAcontecimentos() {
 		return acontecimentos;
 	}
+
 	public void setAcontecimentos(String acontecimentos) {
 		this.acontecimentos = acontecimentos;
 	}
@@ -53,14 +49,17 @@ public class Timeline {
 	public LocalDate getData() {
 		return data;
 	}
+
 	public void setData(LocalDate data) {
 		this.data = data;
 	}
+
 	public Personagem getPersonagem() {
 		return personagem;
 	}
+
 	public void setPersonagem(Personagem personagem) {
 		this.personagem = personagem;
 	}
-	
+
 }
