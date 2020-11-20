@@ -28,6 +28,7 @@
 		<ul class="nav-links">
 			<li><a href="../index.jsp">Início</a><li>
 			<li><a href="timeline.jsp">Timeline</a><li>	
+			<li><a href="curiosidades.jsp">Curiosidades</a><li>
 			<li><a href="https://drive.google.com/file/d/1sLPMJyI5DvHHqCR785MV7sXnFu3ZEW4j/view">Machine Learning</a><li>
 			<li><a href="https://drive.google.com/drive/u/4/folders/1e7SH9DNrcd6pmnrWiSccOAo0kvEYbU9V">Diagrama de classes</a><li>
 		</ul>
@@ -55,7 +56,7 @@
 									</div>
 									<div class="content">
 										<p>${p.getPersonagem().descricao}</p>
-										<a href="jsp/personagem.jsp">Leia Mais</a>
+										<a href="selecionarPersonagem?ano=2015&tempo=2015A&id=${p.getPersonagem().id}">Leia Mais</a>
 									</div>
 								</div>
 							</div>

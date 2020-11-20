@@ -27,7 +27,7 @@
 		<ul class="nav-links">
 			<li><a href="index.jsp">Início</a><li>
 			<li><a href="jsp/timeline.jsp">Timeline</a><li>
-			<li><a href="#">Curiosidades</a><li>
+			<li><a href="jsp/curiosidades.jsp">Curiosidades</a><li>
 			<li><a href="https://drive.google.com/file/d/1sLPMJyI5DvHHqCR785MV7sXnFu3ZEW4j/view">Machine Learning</a><li>
 			<li><a href="https://drive.google.com/drive/u/4/folders/1e7SH9DNrcd6pmnrWiSccOAo0kvEYbU9V">Diagrama de classes</a><li>
 		</ul>
@@ -55,8 +55,7 @@
 <script src="js/menu.js"></script>
 <script type="text/javascript">
 	function message() {
-		alert("Olá, amigo! \n"
-				+ "Para melhorar a sua experiência utilizando o nosso site é importante que você permita a utilização de som e vídeo da nossa página web, caso já não tenha feito. Tenha uma ótima aventura!")
+		alert("Olá, amigx! Para melhorar a sua experiência utilizando o nosso site é importante que você permita a utilização de som e vídeo da nossa página web, caso já não tenha feito. Tenha uma ótima aventura!")
 	}
 </script>
 </body>

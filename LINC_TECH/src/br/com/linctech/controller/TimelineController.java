@@ -1,6 +1,7 @@
 package br.com.linctech.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -10,14 +11,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.linctech.Exception.Excecao;
-import br.com.linctech.beans.Passado;
 import br.com.linctech.beans.Timeline;
 import br.com.linctech.dao.TimelineDAO;
 
 /**
  * Servlet implementation class TimelineController
  */
-@WebServlet(urlPatterns = { "/TimelineController", "/selecionarTimeline", "/selecionarPersonagem" })
+@WebServlet(urlPatterns = { "/TimelineController", "/selecionarTimeline", "/selecionarPersonagem", "/fluxo" })
 public class TimelineController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -39,7 +39,11 @@ public class TimelineController extends HttpServlet {
 				break;
 			
 			case "/LINC_TECH/selecionarPersonagem":
-				selecionarPersonagem(request, response);
+				selecionarPersonagem(request, response, request.getParameter("ano"), request.getParameter("tempo"), Integer.parseInt(request.getParameter("id")));
+				break;
+			
+			case "/LINC_TECH/fluxo":
+				fluxo(request, response, request.getParameter("ano"), request.getParameter("tempo"), Integer.parseInt(request.getParameter("id")));
 				break;
 
 		default:
@@ -47,28 +51,70 @@ public class TimelineController extends HttpServlet {
 		}
 	}
 	
+	protected void fluxo(HttpServletRequest request, HttpServletResponse response, String ano, String tempo, int id) throws ServletException, IOException {
+		try {
+			TimelineDAO dao = new TimelineDAO();
+			List<Timeline> lista =  dao.selecTempo(ano, tempo);
+			String nome = "", titulo = "", desc = "", img = "";
+			int aux = 0;
+			List<String> listaAux = new ArrayList<String>();
+			for (int i = 0; i < lista.size(); i++) {
+				Timeline p = lista.get(i);
+				if (p.getPersonagem().getId() == id) {
+					aux = i+1;
+					nome = p.getPersonagem().getNome();
+					titulo = p.getAcontecimentos();
+					desc = p.getDescricao();
+					img = p.getPersonagem().getImg();
+					listaAux.add(desc);
+				}
+			}
+			
+			request.setAttribute("nome", nome);
+			request.setAttribute("titulo", titulo);
+			request.setAttribute("img", img);
+			request.setAttribute("desc", desc);
+			request.setAttribute("ano", ano);
+			request.setAttribute("tempo", tempo);
+			request.setAttribute("id", id);
+			request.setAttribute("year", ano);
+			
+			request.getRequestDispatcher("jsp/personagem.jsp").forward(request, response);		
+				
+		} catch (Exception e) {
+			e.printStackTrace();
+			Excecao.tratarExcecoes(e);
+		} finally {
+			try {
+				TimelineDAO dao = new TimelineDAO();
+				dao.FecharBanco();
+			} catch (Exception e) {
+				e.printStackTrace();
+				Excecao.tratarExcecoes(e);
+			}
+		}
+	}
+	
 	protected void selecionarTimeline(HttpServletRequest request, HttpServletResponse response, String ano, String tempo) throws ServletException, IOException {
 		try {
-			System.out.println("Entrei Try");
 			TimelineDAO dao = new TimelineDAO();
 			List<Timeline> lista =  dao.selecTempo(ano, tempo);
 			String nome = "";
 			for (Timeline p: lista) {
 				nome = p.getPersonagem().getNome();
-				System.out.println("Nome:" + p.getPersonagem().getNome() + "\n" + p.getPersonagem().getImg() + "\n");
 			}
 			request.setAttribute("nome", nome);
 			request.setAttribute("personagensPassado", lista);
 			
 			
 			if (ano.equals("1955")) {
-				System.out.println("Fazendo request");
+			
 				request.getRequestDispatcher("jsp/ano1955.jsp").forward(request, response);		
 			} else if (ano.equals("1985")){
-				System.out.println("Fazendo request");
+				
 				request.getRequestDispatcher("jsp/ano1985.jsp").forward(request, response);		
 			} else if (ano.equals("2015")) {
-				System.out.println("Fazendo request");
+				
 				request.getRequestDispatcher("jsp/ano2015.jsp").forward(request, response);		
 			}
 				
@@ -88,9 +134,53 @@ public class TimelineController extends HttpServlet {
 		
 	}
 
-	protected void selecionarPersonagem(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void selecionarPersonagem(HttpServletRequest request, HttpServletResponse response, String ano, String tempo, int id) throws ServletException, IOException {
+		try {
+			TimelineDAO dao = new TimelineDAO();
+			List<Timeline> lista =  dao.selecTempo(ano, tempo);
+			String nome = "", titulo = "", desc = "", img = "";
+			int aux = 0;
+			List<String> listaAux = new ArrayList<String>();
+			for (int i = 0; i < lista.size(); i++) {
+				Timeline p = lista.get(i);
+				if (p.getPersonagem().getId() == id) {
+					aux = i+1;
+					nome = p.getPersonagem().getNome();
+					titulo = p.getAcontecimentos();
+					desc = p.getDescricao();
+					img = p.getPersonagem().getImg();
+					listaAux.add(desc);
+				}
+			}
+			
+			request.setAttribute("nome", nome);
+			request.setAttribute("titulo", titulo);
+			request.setAttribute("img", img);
+			request.setAttribute("desc", desc);
+			request.setAttribute("ano", ano);
+			request.setAttribute("tempo", tempo);
+			request.setAttribute("id", id);
+			request.setAttribute("year", ano);
+			System.out.println(ano);
+			
+			request.getRequestDispatcher("jsp/personagem.jsp").forward(request, response);		
+				
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			Excecao.tratarExcecoes(e);
+		} finally {
+			try {
+				TimelineDAO dao = new TimelineDAO();
+				dao.FecharBanco();
+			} catch (Exception e) {
+				e.printStackTrace();
+				Excecao.tratarExcecoes(e);
+			}
+		}
 		
 	}
-	
+		
 }
+
+
