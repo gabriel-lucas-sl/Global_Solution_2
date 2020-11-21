@@ -1,21 +1,53 @@
 /*Font*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import
+	url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+	;
 
 /*Reset
 -------------------------------------------------*/
-*, *:before, *:after{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}
-body{font-family: 'Montserrat','Lato', 'Open Sans', sans-serif; font-size: inherit}
-
-input, select, iframe, button{border: none; font-family: 'Open Sans', sans-serif;}
-h1, h2, h3{margin: 0; padding: 0;}
-a{text-decoration:none; color: black;} 
-ol, ul{list-style: none;}
-img{max-width: 100%; border: none;}
-html {
-    scroll-behavior: smooth;
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 
-.logo {width: 90px;}
+body {
+	font-family: 'Montserrat', 'Lato', 'Open Sans', sans-serif;
+	font-size: inherit
+}
+
+input, select, iframe, button {
+	border: none;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	border: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.logo {
+	width: 90px;
+}
 
 .voltar {
 	position: relative;
@@ -25,19 +57,16 @@ html {
 	z-index: 10000;
 }
 
-.voltar a{
-    color: #cdb30c;
-    font-size: 14px;
+.voltar a {
+	color: #cdb30c;
+	font-size: 14px;
 }
 
 .voltar a:hover {
-	text-decoration: underline;	
+	text-decoration: underline;
 }
 
-
 /*MENU*/
-
-
 nav {
 	height: 10vh;
 	background: none;
@@ -87,7 +116,10 @@ nav {
 	position: relative;
 }
 
-.movie h4 { font-weight: normal; color: white; }
+.movie h4 {
+	font-weight: normal;
+	color: white;
+}
 
 .line {
 	width: 30px;
@@ -151,5 +183,3 @@ nav {
 li.fade {
 	opacity: 1;
 }
-
-
